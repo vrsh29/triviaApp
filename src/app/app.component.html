@@ -1,0 +1,32 @@
+
+  <div class="container-fluid">
+ 
+    <div class="row">
+    <!--form-->
+    <form #submitForm="ngForm" class="create_form" (ngSubmit)="showResult(submitForm.valid)" novalidate>
+      <div class="col-sm-7" >
+      <ol class="unstyled">
+        <li *ngFor="let question of questions; index as i" >
+          <div class="question">
+         <strong>{{ question.questionText }}</strong>
+        </div>
+          <div class="unstyled" id="quest_{{i}}">
+              <select [(ngModel)]="answers[i]" name= "answers[i]" required id="{{i}}" [ngStyle]="{'border':question.invalid ? '1px solid red':' '}" >
+                  <option *ngFor="let answer of question.answers;index as j" >{{ answer.answerText }}</option>    
+              </select>
+        </div>
+        </li>
+      </ol>
+    
+      <button class="btn btn-primary">Submit</button>
+      
+      <button class="btn btn-danger" type="reset" (click)="reset()">Clear</button>    
+      </div>
+    </form>
+
+      
+        <div class="col-sm-4">
+          <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+        </div>
+      </div>
+     </div>   

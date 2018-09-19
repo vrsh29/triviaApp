@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.container,.main_container{
+    margin: 2%;
+}
+
+.line{
+    border: 1px solid black;
+    height: 50px;
+    width: 15%;
+    background-color: lightgray;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #3c763d;
+    border-color: #3c763d;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #53a255;
+    border-color: #53a255;
+}
+
+.score{
+    border: 1px solid black;
+    height: 50px;
+    width: 20%;
+}
+
+.change_border{
+    background-color: green;
+}
